@@ -21,7 +21,7 @@ class Model_Car extends Mango {
 		parent::set_model_definition();
 	}
 
-	public function create()
+	public function create($safe = TRUE)
 	{
 		$this->car_type = $this->_car_type;
 
