@@ -245,10 +245,10 @@ class Controller_MangoDemo extends Controller_Template {
 		))->create();
 
 		// add HABTM relationship between users and groups
-		$user1->add($group1);
-		$user1->add($group2);
-		$user2->add($group1);
-		$user2->add($group2);
+		$group1->add($user1);
+		$group1->add($user2);
+		$group2->add($user1);
+		$group2->add($user2);
 
 		//SAVE ALL OBJECTS
 		$user1->update();
