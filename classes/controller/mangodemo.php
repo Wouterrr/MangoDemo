@@ -87,7 +87,7 @@ class Controller_MangoDemo extends Controller_Template {
 
 			$content .= Debug::vars('account',$account->name,'has',$users->count(),'users');
 		}
-		catch(Validate_Exception $e)
+		catch(Validation_Exception $e)
 		{
 			$content .= Debug::vars($e->array->errors());
 		}
@@ -564,7 +564,7 @@ class Controller_MangoDemo extends Controller_Template {
 
 			echo Debug::vars('Full Validation success!',$data);
 		}
-		catch(Validate_Exception $e)
+		catch(Validation_Exception $e)
 		{
 			echo Debug::vars('Full Validation failed', $e->model . ' (' . $e->seq .')', $e->array->errors());
 		}
@@ -576,7 +576,7 @@ class Controller_MangoDemo extends Controller_Template {
 
 			echo Debug::vars('Local Validation success!',$data);
 		}
-		catch(Validate_Exception $e)
+		catch(Validation_Exception $e)
 		{
 			echo Debug::vars('Local Validation failed', $e->model . ' (' . $e->seq .')', $e->array->errors());
 		}
@@ -602,7 +602,7 @@ class Controller_MangoDemo extends Controller_Template {
 
 			echo Debug::vars('Only Validation success!',$data);
 		}
-		catch(Validate_Exception $e)
+		catch(Validation_Exception $e)
 		{
 			echo Debug::vars('Only Validation failed', $e->model . ' (' . $e->seq .')', $e->array->errors());
 		}
