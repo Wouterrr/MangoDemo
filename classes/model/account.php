@@ -8,7 +8,7 @@ class Model_Account extends Mango {
 			'min_length' => 3,
 			'max_length' => 127,
 			'rules' => array(
-				'alpha_numeric' => NULL
+				array('alpha_numeric')
 			)
 		),
 		// the attributes below might seem strange - they are :-)
